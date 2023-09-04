@@ -55,10 +55,10 @@ jobs:
         run: cd ./nomad && cmake -DTEST_OPENMP=OFF -DBUILD_INTERFACE_MATLAB=ON -DBUILD_INTERFACE_PYTHON=ON -S . -B build/release
 
       - name: Build
-        run: cmake --build build/release
+        run: cd ./nomad && cmake --build build/release
 
       - name: Install
-        run: cmake --install build/release       
+        run: cd ./nomad && cmake --install build/release       
 
       - name: Run test
         uses: matlab-actions/run-command@v1.2.0
