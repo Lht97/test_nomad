@@ -1,4 +1,4 @@
-name: Tough test of blockwise direct search
+name: Try to run the example of nomad in matlab
 
 on:
   # Trigger the workflow on push or pull request
