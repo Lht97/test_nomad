@@ -33,10 +33,6 @@ jobs:
           repository: bbopt/nomad
           path: nomad
 
-      - name: Link gfortran for MATLAB on Linux
-        if: startsWith(matrix.os, 'ubuntu')
-        run: bash .github/scripts/link_gfortran ${{ env.GFORTRAN_VERSION }}
-
       - name: Install Texlive
         run: sudo apt-get update && sudo apt-get install texlive
 
