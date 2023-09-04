@@ -37,7 +37,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install cmake
 
       - name: Configuration
-        run: cmake -DTEST_OPENMP=OFF -DBUILD_INTERFACE_MATLAB=ON -DBUILD_INTERFACE_PYTHON=ON -S . -B build/release
+        run: cd ./nomad && cmake -DTEST_OPENMP=OFF -DBUILD_INTERFACE_MATLAB=ON -DBUILD_INTERFACE_PYTHON=ON -S . -B build/release
 
       - name: Build
         run: cmake --build build/release
