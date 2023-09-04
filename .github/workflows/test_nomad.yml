@@ -64,7 +64,8 @@ jobs:
         uses: matlab-actions/run-command@v1.2.0
         with:
           command:
-            cd(./nomad/interfaces/Matlab_MEX);
+            addpath(./nomad/build/release/lib);
+            addpath(./nomad/build/release/interfaces/Matlab_MEX);
             test_nomad_gerad
 
       - name: Upload artifact
