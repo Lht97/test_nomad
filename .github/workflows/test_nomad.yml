@@ -64,7 +64,11 @@ jobs:
         uses: matlab-actions/run-command@v1.2.0
         with:
           command:
-            addpath(./nomad/build/release/lib);
-            addpath(./nomad/build/release/interfaces/Matlab_MEX);
+            cd ./nomad          
+            root_dir = pwd();
+            path_dir = fullfile(root_dir, 'build', 'release', 'lib');
+            addpath(path_dir);
+            path_Matlab_MEX = fullfile(root_dir, 'nomad', 'interfaces', 'Matlab_MEX');
+            cd(path_Matlab_MEX);
             test_nomad_gerad
 
