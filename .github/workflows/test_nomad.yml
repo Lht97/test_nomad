@@ -68,8 +68,3 @@ jobs:
             addpath(./nomad/build/release/interfaces/Matlab_MEX);
             test_nomad_gerad
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: test_nomad_gerad
-          path: ./tests/testdata
